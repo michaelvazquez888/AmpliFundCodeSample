@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "a7331e35-4ce0-485d-a233-f95f803a9f6f",
+		"name": "AmpliFundCodeSample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25000037"
+	},
+	"item": [
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Get All Pokemon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemon/getpokemon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemon",
+								"getpokemon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pokemon By Pokedex Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemon/getpokemon?pokedexnum=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemon",
+								"getpokemon"
+							],
+							"query": [
+								{
+									"key": "pokedexnum",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pokemon By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemon/getpokemon?name=squirtle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemon",
+								"getpokemon"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "squirtle"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Pokemon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"TestPokemon1\",\r\n    \"PokedexNum\": 111,\r\n    \"Type1Id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55469/pokemon/createpokemon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemon",
+								"createpokemon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pokemon",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PokemonId\": 5,\r\n    \"Name\": \"TestPokemon2\",\r\n    \"PokedexNum\": 222,\r\n    \"Type1Id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55469/pokemon/updatepokemon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemon",
+								"updatepokemon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pokemon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemon/deletepokemon?pokemonId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemon",
+								"deletepokemon"
+							],
+							"query": [
+								{
+									"key": "pokemonId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pokemon Types",
+			"item": [
+				{
+					"name": "Get All Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemontype/gettypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemontype",
+								"gettypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Type By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemontype/gettypes?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemontype",
+								"gettypes"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Type By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemontype/gettypes?name=Rock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemontype",
+								"gettypes"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Rock"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"TestType1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55469/pokemontype/createtype",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemontype",
+								"createtype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Type",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PokemonTypeId\": 9,\r\n    \"Name\": \"TestType22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:55469/pokemontype/updatetype",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemontype",
+								"updatetype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:55469/pokemontype/deletetype?pokemonTypeId=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "55469",
+							"path": [
+								"pokemontype",
+								"deletetype"
+							],
+							"query": [
+								{
+									"key": "pokemonTypeId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
